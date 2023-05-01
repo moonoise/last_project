@@ -58,10 +58,11 @@ Route::middleware(['middleware' => 'auth'])->group(function () {
         Route::get('/registed_show',[AdminRegisterController::class,'registed_show'])->name('registed_show.show');
         Route::get('/registed_show/search',[AdminRegisterController::class,'registed_search'])->name('registed_show.search');
         Route::get('/onoff',[AdminRegisterController::class,'onoff'])->name('onoff.show');
+        Route::post('/onoff',[AdminRegisterController::class,'onoff_change'])->name('onoff.change');
 
         Route::delete('/registed/{id}',[AdminRegisterController::class,'destroy'])->name('registed_show.destroy');
 
-
+        Route::get('/preview/{token}',[AdminRegisterController::class,'preview'])->name('preview');
 
     });
 });

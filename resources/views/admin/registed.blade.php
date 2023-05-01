@@ -48,7 +48,7 @@
                                             <td>{{ $item->email }}</td>
                                             <td>
                                                 <form action="{{ route('registed_show.destroy',$item->id) }}" method="Post">
-                                                <a class="btn btn-primary btn-sm" href="{{ route('step4.show',$item->token) }}" target="preview">ดู</a>
+                                                <a class="btn btn-primary btn-sm" href="{{ route('preview',$item->token) }}" target="preview">ดู</a>
                                                 <a class="btn btn-info btn-sm" href="{{ route('printpreview.show',$item->token) }}" target="printpreview">ปริ้น</a>
                                                 @csrf
                                                 @method('DELETE')
